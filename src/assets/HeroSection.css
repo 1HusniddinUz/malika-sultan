@@ -1,0 +1,159 @@
+/* === HERO SECTION === */
+#HeroSection {
+    width: 100%;
+    background: #292E36;
+    border: 2px dashed #565353;
+}
+
+#HeroSection .container {
+    width: 90%;
+    padding: 40px 0;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* === COMPANY ABOUT TEXT === */
+#HeroSection .company_about {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#HeroSection .company_about h1 {
+    font-size: 4rem;
+    font-family: "Cormorant Infant", serif;
+    font-weight: 400;
+    color: white;
+    line-height: 1.2;
+    transition: text-shadow 0.3s ease;
+}
+
+#HeroSection .company_about h1:hover {
+    text-shadow: 0px 4px 15px rgba(225, 177, 104, 0.5);
+}
+
+#HeroSection .company_about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    color: white;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#HeroSection .company_about p:hover {
+    color: #E1B168;
+    text-shadow: 0px 2px 10px rgba(225, 177, 104, 0.4);
+}
+
+/* === BUTTON === */
+#HeroSection .company_about a button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #E1B168;
+    background: transparent;
+    padding: 16px 40px;
+    border: 1px solid #E1B168;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+#HeroSection .company_about a button:hover {
+    background: #E1B168;
+    color: #292E36;
+    box-shadow: 0px 8px 20px rgba(225, 177, 104, 0.3);
+    transform: translateY(-3px);
+}
+
+/* === IMAGE BOX === */
+#HeroSection .company_photo {
+    flex: 1;
+    background: #3E424A;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+#HeroSection .company_photo:hover {
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+    transform: scale(1.02);
+}
+
+#HeroSection .company_photo img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+#HeroSection .company_photo img:hover {
+    transform: scale(1.05);
+}
+
+/* === AOS ANIMATION FIX === */
+[data-aos] {
+    transition-property: transform, opacity !important;
+}
+
+/* === RESPONSIVE BREAKPOINTS === */
+
+/* 📱 Mobile (max 768px) */
+@media (max-width: 768px) {
+    #HeroSection .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 10px;
+    }
+
+    #HeroSection .company_about {
+        width: 100%;
+        align-items: center;
+    }
+
+    #HeroSection .company_about h1 {
+        font-size: 2.5rem;
+    }
+
+    #HeroSection .company_about p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    #HeroSection .company_photo {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    #HeroSection .company_photo img {
+        max-width: 300px;
+    }
+}
+
+/* 📟 Tablet (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #HeroSection .company_about h1 {
+        font-size: 3.2rem;
+    }
+
+    #HeroSection .company_about p {
+        font-size: 1.05rem;
+    }
+
+    #HeroSection .company_photo img {
+        max-width: 380px;
+    }
+}
+
+/* 🖥️ Desktop (1025px+) */
+@media (min-width: 1025px) {
+    #HeroSection .company_about h1 {
+        font-size: 4.5rem;
+    }
+}

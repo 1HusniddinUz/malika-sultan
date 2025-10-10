@@ -1,0 +1,22 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body {
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+a , li
+{
+    text-decoration: none;
+    list-style: none;
+}
+a button:hover
+{
+    cursor: pointer;
+}

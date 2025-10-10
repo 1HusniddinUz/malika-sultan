@@ -1,0 +1,3 @@
+[data-aos] {
+    transition-property: transform, opacity !important;
+}

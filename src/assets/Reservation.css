@@ -1,0 +1,147 @@
+/* === SECTION BASE === */
+#Reservation {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("./images/Recervation_bg.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.overlay_res {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 17, 21, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+/* === RESERVATION BOX === */
+.reservation-box {
+    position: relative;
+    z-index: 2;
+    background: rgba(31, 35, 43, 0.85);
+    padding: 60px 80px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    width: 65%;
+    height: 70%;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    align-content: center;
+}
+
+/* === LABEL === */
+.res-label {
+    font-family: "Montserrat", sans-serif;
+    background: transparent;
+    color: white;
+    border-top: 1px solid #e1b168;
+    border-bottom: 1px solid #e1b168;
+    border-left: none;
+    border-right: none;
+    padding: 6px 18px;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    cursor: default;
+    margin-bottom: 15px;
+}
+
+/* === TITLE === */
+.res-title {
+    font-family: "Cormorant Infant", serif;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+/* === FORM === */
+.res-form {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 60%;
+    flex-wrap: wrap;
+}
+
+.input-row input {
+    flex: 1;
+    min-width: 160px;
+    padding: 12px 14px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-row input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Montserrat", sans-serif;
+}
+
+.input-row input:focus {
+    border-color: #e1b168;
+}
+
+/* === BUTTON === */
+.res-btn {
+    background: #fff;
+    color: #1f232b;
+    border: none;
+    padding: 12px 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.res-btn:hover {
+    background: #e1b168;
+    color: #1f232b;
+    transform: translateY(-3px);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .reservation-box {
+        padding: 40px 25px;
+        width: 90%;
+    }
+
+    .res-title {
+        font-size: 1.6rem;
+    }
+
+    .input-row {
+        gap: 12px;
+    }
+
+    .res-btn {
+        padding: 10px 30px;
+    }
+}
+
+
+[data-aos] {
+    opacity: 0;
+    transition-property: transform, opacity;
+}
+
+.aos-animate {
+    opacity: 1;
+}

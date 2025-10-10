@@ -1,0 +1,64 @@
+#TripleInfo {
+    width: 100%;
+    background: #fdf8f5; /* och pastel background */
+    padding: 80px 20px;
+}
+
+#TripleInfo .container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.Info_cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.info_item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1 1 30%;
+    min-width: 250px;
+}
+
+.icon_circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #292E36;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.text_box h3 {
+    font-size: 1.4rem;
+    font-family: "Cormorant Infant", serif;
+    font-weight: 500;
+    color: #292E36;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.text_box p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .Info_cards {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .info_item {
+        width: 100%;
+    }
+}
