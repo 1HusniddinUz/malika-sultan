@@ -69,10 +69,10 @@ const Products = () => {
         <div id="Products">
             <div className="container">
                 <div className="section-header" data-aos="fade-down">
-                    <button>MENU</button>
-                    <h3>Popular Dresses</h3>
+                    <button>Liboslar kolleksiyasi</button>
+                    <h3>Mashhur liboslar</h3>
                     <p>
-                        Handcrafted national clothing — each piece tells a story of tradition and modern elegance.
+                        Qo'lda ishlangan milliy liboslar — har bir asar an'ana va zamonaviy nafosat haqida hikoya qiladi.
                     </p>
                 </div>
 

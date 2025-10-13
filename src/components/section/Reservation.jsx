@@ -19,10 +19,10 @@ const Reservation = () => {
 
             <div className="reservation-box" data-aos="zoom-in">
                 <button className="res-label" data-aos="fade-down" data-aos-delay="200">
-                    RESERVATION
+                    Buyurtma qilish
                 </button>
                 <h2 className="res-title" data-aos="fade-up" data-aos-delay="400">
-                    To order clothes
+                    Kiyim buyurtma qilish uchun
                 </h2>
 
                 <form className="res-form" data-aos="fade-up" data-aos-delay="600">
@@ -49,7 +49,7 @@ const Reservation = () => {
                         data-aos="fade-up"
                         data-aos-delay="1200"
                     >
-                        Book A Table
+                          Yuborish
                     </button>
                 </form>
             </div>

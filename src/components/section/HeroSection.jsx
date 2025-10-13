@@ -18,13 +18,14 @@ const HeroSection = () => {
         <div id="HeroSection">
             <div className="container">
                 <div className="company_about" data-aos="fade-right">
-                    <h1 data-aos="fade-down">Welcome to Restaurant</h1>
+                    <h1 data-aos="fade-down">Sharqona go‘zallik — zamonaviy ayol uchun qayta yaratilgan.</h1>
                     <p data-aos="fade-up">
-                        The people, food and the prime locations make the perfect place good
-                        friends & family to come together and have great time.
+                        MALIKA SULTON liboslari — bu an’ana va zamonaviylikning betakror ittifoqi.
+                        Ularni kiygan har bir ayol, o‘zini shunchaki chiroyli emas, malikadek qudratli his qiladi.
+                        Chunki har bir libos — bu qo‘l mehnati, yurak harorati va milliy g‘ururdan to‘qilgan san’at asari.
                     </p>
-                    <a href="#">
-                        <button data-aos="zoom-in">View Menu</button>
+                    <a href="#Products">
+                        <button data-aos="zoom-in">Liboslar kolleksiyasi</button>
                     </a>
                 </div>
                 <div className="company_photo" data-aos="fade-left">

@@ -24,7 +24,7 @@
 }
 
 #HeroSection .company_about h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: "Cormorant Infant", serif;
     font-weight: 400;
     color: white;
@@ -154,6 +154,6 @@
 /* 🖥️ Desktop (1025px+) */
 @media (min-width: 1025px) {
     #HeroSection .company_about h1 {
-        font-size: 4.5rem;
+        font-size: 3rem;
     }
 }

@@ -66,10 +66,16 @@ nav .container
 
 .NavTop .logo_box
 {
+    box-sizing: border-box;
     width: 30%;
     color: white;
     text-align: center;
 }
+.NavTop .logo_box img
+{
+    height: 220px;
+}
+
 .NavTop .reservation_box
 {
     width: 30%;
@@ -220,7 +226,6 @@ nav .container
     margin-top: 20px;
     align-items: center;
 }
-
 .mobile-buttons a button {
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
@@ -235,7 +240,32 @@ nav .container
 .mobile-buttons a:last-child button {
     background: #E1B168;
 }
+.lang-select select {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(225, 177, 104, 0.4);
+    color: #E1B168;
+    border-radius: 30px;
+    padding: 8px 16px;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+}
 
+.lang-select select:hover {
+    background: rgba(225, 177, 104, 0.15);
+}
+
+.mobile-lang select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(225, 177, 104, 0.4);
+    color: #E1B168;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
 /* Responsive */
 @media (max-width: 991px) {
     .NavBottom {
