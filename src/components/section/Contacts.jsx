@@ -19,6 +19,7 @@ const Contacts = () => {
                         <a href="https://t.me/makhfuzasalimova" target="_blank" rel="noopener noreffer"><i className="fa-brands fa-telegram"></i></a>
                         <a href="https://t.me/makhfuzasalimova" target="_blank" rel="noopener noreffer"><i className="fa-brands fa-facebook"></i></a>
                         <a href="https://www.youtube.com/@mahfuzasalim" target="_blank" rel="noopener noreffer"><i className="fa-brands fa-youtube"></i></a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=makhfuzasalim55@gmail.com&body=Assalomu%20alaykum" target="_blank" rel="noopener noreffer"><i className="fa-solid fa-envelope"></i></a>
                     </div>
                 </div>
 
