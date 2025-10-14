@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 
 import "../../assets/HeroSection.css";
 import working_time from "../../assets/images/working_time.png";
+import {useTranslation} from "react-i18next";
 
 const HeroSection = () => {
     useEffect(() => {
@@ -13,21 +14,19 @@ const HeroSection = () => {
             once: true,
         });
     }, []);
-
+    const {t} = useTranslation();
     return (
         <div id="HeroSection">
             <div className="container">
                 <div className="company_about" data-aos="fade-right">
                     <h1 data-aos="fade-down">
-                        Sharqona go‘zallik — zamonaviy ayol uchun qayta yaratilgan.
+                        {t(`quotes`)}
                     </h1>
                     <p data-aos="fade-up">
-                        MALIKA SULTON liboslari — bu an’ana va zamonaviylikning betakror ittifoqi.
-                        Ularni kiygan har bir ayol, o‘zini shunchaki chiroyli emas, malikadek qudratli his qiladi.
-                        Chunki har bir libos — bu qo‘l mehnati, yurak harorati va milliy g‘ururdan to‘qilgan san’at asari.
+                        {t(`aboutUs`)}
                     </p>
                     <a href="#Products">
-                        <button data-aos="zoom-in">Liboslar kolleksiyasi</button>
+                        <button data-aos="zoom-in">{t(`collectionBtn`)}</button>
                     </a>
                 </div>
                 <div className="company_photo" data-aos="fade-left">

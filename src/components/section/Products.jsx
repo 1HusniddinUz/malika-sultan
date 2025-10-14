@@ -17,6 +17,7 @@ import img8 from "../../assets/images/naqsh2.jpg";
 import img9 from "../../assets/images/oq1.jpg";
 import img10 from "../../assets/images/qizg'ish1.jpg";
 import img11 from "../../assets/images/yashil1.jpg";
+import {useTranslation} from "react-i18next";
 
 const Products_data = [
     { id: 1, front: img1, back: img2, name: "Bardoviy Dress", sum: "230$", desc: "Cradle wedding collection" },
@@ -40,7 +41,8 @@ const PrevArrow = ({ onClick }) => (
 );
 
 const Products = () => {
-    const [showCatalog, setShowCatalog] = useState(false);
+    const {t} = useTranslation();
+        const [showCatalog, setShowCatalog] = useState(false);
 
     useEffect(() => {
         AOS.init({ duration: 1200, easing: "ease-in-out", once: true });
@@ -69,10 +71,10 @@ const Products = () => {
         <div id="Products">
             <div className="container">
                 <div className="section-header" data-aos="fade-down">
-                    <button>Liboslar kolleksiyasi</button>
-                    <h3>Mashhur liboslar</h3>
+                    <button>{t(`collectionBtn`)}</button>
+                    <h3>{t(`famClothes`)}</h3>
                     <p>
-                        Qo'lda ishlangan milliy liboslar — har bir asar an'ana va zamonaviy nafosat haqida hikoya qiladi.
+                        {t(`famClothesSlogan`)}
                     </p>
                 </div>
 
@@ -84,7 +86,7 @@ const Products = () => {
                                 <img src={item.front} alt={item.name} className="front" />
                                 <img src={item.back} alt={item.name} className="back" />
                                 <div className="overlay">
-                                    <button className="view-btn">View Details</button>
+
                                 </div>
                             </div>
                             <div className="card-info">
@@ -99,7 +101,7 @@ const Products = () => {
                 {/* === See More / Less Button === */}
                 {!showCatalog && catalogProducts.length > 0 && (
                     <button className="see-more" onClick={() => setShowCatalog(true)}>
-                        See More
+                        {t(`coruselMoreBtn`)}
                     </button>
                 )}
 
@@ -122,7 +124,7 @@ const Products = () => {
                         <div className="see-less-wrapper" data-aos="fade-up">
                             <div className="see-less-gradient"></div>
                             <button className="see-less" onClick={() => setShowCatalog(false)}>
-                                See Less
+                                {t(`coruselLessBtn`)}
                             </button>
                         </div>
                     </>

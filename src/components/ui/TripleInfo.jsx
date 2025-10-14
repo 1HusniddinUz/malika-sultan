@@ -2,28 +2,33 @@ import "../../assets/TripleInfo.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {useEffect} from "react";
-const CardsInfo = [
-    {
-        id: 1,
-        name: "Locate Us",
-        location: "Riverside 25, San Diego, California",
-        fonts: <i className="fa-solid fa-location-dot"></i>,
-    },
-    {
-        id: 2,
-        name: "Open Hours",
-        location: "Mon To Fri 9:00 AM - 9:00 PM",
-        fonts: <i className="fa-solid fa-clock"></i>,
-    },
-    {
-        id: 3,
-        name: "Reservation",
-        location: "restaurantate@gmail.com",
-        fonts: <i className="fa-solid fa-table"></i>,
-    },
-];
+import {useTranslation} from "react-i18next";
+
 
 const TripleInfo = () => {
+    const {t} = useTranslation();
+
+    const CardsInfo = [
+        {
+            id: 1,
+            name: t("location"),
+            location: t("locationData"),
+            fonts: <i className="fa-solid fa-location-dot"></i>,
+        },
+        {
+            id: 2,
+            name: t("openHour"),
+            location: t("openDate"),
+            fonts: <i className="fa-solid fa-clock"></i>,
+        },
+        {
+            id: 3,
+            name: t("famClothes"),
+            location: "malikasultan@gmail.com",
+            fonts: <i className="fa-solid fa-table"></i>,
+        },
+    ];
+
     useEffect(() => {
         AOS.init({
             duration: 1200, // animatsiya davomiyligi (ms)

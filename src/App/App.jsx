@@ -6,9 +6,25 @@ import Header from "../components/layout/Header.jsx";
 import Content from "../components/layout/Content.jsx";
 import Footer from "../components/layout/Footer.jsx";
 
+import i18n from "i18next";
+import {initReactI18next} from "react-i18next";
+import translationsEn from "../locales/translationsEn.js";
+import translationsUz from "../locales/translationsUz.js";
+import translationsRU from "../locales/translationsRu.js";
 
-
+i18n.use(initReactI18next).init({
+    resources: {
+        en: { translation: translationsEn },
+        uz: { translation: translationsUz },
+        ru: { translation: translationsRU }
+    },
+    lng: "en",
+    fallbackLng: "en",
+})
 function App() {
+    const changeLang = (value) => {
+        i18n.changeLanguage(value)
+    }
     useEffect(() => {
         AOS.init({
             duration: 1000, // animatsiya davomiyligi (ms)
@@ -19,9 +35,9 @@ function App() {
   return (
     <>
       <div>
-          <Header />
-          <Content />
-          <Footer />
+          <Header changeLang={changeLang} />
+          <Content changeLang={changeLang} />
+          <Footer changeLang={changeLang} />
       </div>
     </>
   )

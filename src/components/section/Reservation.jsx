@@ -2,8 +2,10 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../assets/Reservation.css";
+import {useTranslation} from "react-i18next";
 
 const Reservation = () => {
+    const { t } = useTranslation();
     useEffect(() => {
         AOS.init({
             duration: 1200,
@@ -19,10 +21,10 @@ const Reservation = () => {
 
             <div className="reservation-box" data-aos="zoom-in">
                 <button className="res-label" data-aos="fade-down" data-aos-delay="200">
-                    Buyurtma qilish
+                    {t(`order`)}
                 </button>
                 <h2 className="res-title" data-aos="fade-up" data-aos-delay="400">
-                    Kiyim buyurtma qilish uchun
+                    {t`toOrderP`}
                 </h2>
 
                 <form className="res-form" data-aos="fade-up" data-aos-delay="600">
@@ -49,7 +51,7 @@ const Reservation = () => {
                         data-aos="fade-up"
                         data-aos-delay="1200"
                     >
-                          Yuborish
+                        {t(`toOrderBtn`)}
                     </button>
                 </form>
             </div>

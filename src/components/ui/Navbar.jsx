@@ -3,6 +3,7 @@ import "../../assets/Navbar.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import logo from "../../assets/images/logo.png"
+import {useTranslation} from "react-i18next";
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -13,7 +14,7 @@ const Navbar = () => {
             easing: "ease-in-out",
         });
     }, []);
-
+    const {t, i18n} = useTranslation();
     return (
         <nav id="Navbar">
             <div className="container">
@@ -21,7 +22,7 @@ const Navbar = () => {
                 <div className="NavTop">
                     <div className="call_box" data-aos="fade-down">
                         <a href="tel:+998914422266" rel="noopener">
-                            <button>Bog'lanish uchun <br/> +998 91 442 22 66</button>
+                            <button>{t(`contact`)}<br/> +998 91 442 22 66</button>
                         </a>
                     </div>
 
@@ -31,7 +32,7 @@ const Navbar = () => {
 
                     <div className="reservation_box" data-aos="fade-down">
                         <a href="#Reservation">
-                            <button>Buyurtma qilish</button>
+                            <button>{t(`order`)}</button>
                         </a>
                     </div>
 
@@ -56,19 +57,23 @@ const Navbar = () => {
                 <div className="NavBottom">
                     <div className="tool_bar" data-aos="slide-right">
                         <ul>
-                            <li><a href="#">Bosh sahifa</a></li>
-                            <li><a href="#HeroSection">Biz haqimizda</a></li>
-                            <li><a href="#Products">Liboslar</a></li>
-                            <li><a href="#Reservation">Buyurtma qilish</a></li>
-                            <li><a href="#Contacts">Bog'lanish uchun</a></li>
+                            <li><a href="#">{t(`headersec`)}</a></li>
+                            <li><a href="#HeroSection">{t(`about`)}</a></li>
+                            <li><a href="#Products">{t(`products`)}</a></li>
+                            <li><a href="#Reservation">{t(`order`)}</a></li>
+                            <li><a href="#Contacts">{t(`contact`)}</a></li>
                         </ul>
                     </div>
 
                     <div className="lang-select">
-                        <select>
-                            <option value="en">EN</option>
-                            <option value="ru">RU</option>
-                            <option value="uz">UZ</option>
+                        <select
+                            id="select"
+                            onChange={(e) => i18n.changeLanguage(e.target.value)}
+                            defaultValue="en"
+                        >
+                            <option value="en">🇬🇧 English</option>
+                            <option value="ru">🇷🇺 Русский</option>
+                            <option value="uz">🇺🇿 O'zbek</option>
                         </select>
                     </div>
                 </div>
@@ -77,11 +82,11 @@ const Navbar = () => {
             {/* === MOBILE MENU === */}
             <div className={`mobile-menu ${isOpen ? "active" : ""}`}>
                 <ul>
-                    <li><a href="#" onClick={() => setIsOpen(false)}>Home</a></li>
-                    <li><a href="#" onClick={() => setIsOpen(false)}>About Us</a></li>
-                    <li><a href="#" onClick={() => setIsOpen(false)}>Products</a></li>
-                    <li><a href="#" onClick={() => setIsOpen(false)}>To Order</a></li>
-                    <li><a href="#" onClick={() => setIsOpen(false)}>Contacts</a></li>
+                    <li><a href="#" onClick={() => setIsOpen(false)}>{t(`headersec`)}</a></li>
+                    <li><a href="#" onClick={() => setIsOpen(false)}>{t(`about`)}</a></li>
+                    <li><a href="#" onClick={() => setIsOpen(false)}>{t(`products`)}</a></li>
+                    <li><a href="#" onClick={() => setIsOpen(false)}>{t(`order`)}</a></li>
+                    <li><a href="#" onClick={() => setIsOpen(false)}>{t(`contact`)}</a></li>
                 </ul>
 
                 <div className="social_links mobile-only">
@@ -92,18 +97,22 @@ const Navbar = () => {
                 </div>
                 <div className="mobile-buttons">
                     <a href="tel:+998914422266" rel="noopener">
-                        <button>Bog'lanish uchun <br/> +998 91 442 22 66</button>
+                        <button>{t(`contact`)}<br/> +998 91 442 22 66</button>
                     </a>
                     <a href="#Reservation">
-                        <button>Buyurtma qilish</button>
+                        <button>{t(`order`)}</button>
                     </a>
                 </div>
 
                 <div className="mobile-lang">
-                    <select>
-                        <option value="en">EN</option>
-                        <option value="ru">RU</option>
-                        <option value="uz">UZ</option>
+                    <select
+                        id="select"
+                        onChange={(e) => i18n.changeLanguage(e.target.value)}
+                        defaultValue="en"
+                    >
+                        <option value="en">🇬🇧 English</option>
+                        <option value="ru">🇷🇺 Русский</option>
+                        <option value="uz">🇺🇿 O'zbek</option>
                     </select>
                 </div>
             </div>
