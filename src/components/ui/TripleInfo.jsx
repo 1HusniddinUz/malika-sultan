@@ -23,8 +23,8 @@ const TripleInfo = () => {
         },
         {
             id: 3,
-            name: t("famClothes"),
-            location: "malikasultan@gmail.com",
+            name: t("order"),
+            location: "makhfuzasalim55@gmail.com",
             fonts: <i className="fa-solid fa-table"></i>,
         },
     ];

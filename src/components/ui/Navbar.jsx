@@ -83,10 +83,10 @@ const Navbar = () => {
             <div className={`mobile-menu ${isOpen ? "active" : ""}`}>
                 <ul>
                     <li><a href="#" onClick={() => setIsOpen(false)}>{t(`headersec`)}</a></li>
-                    <li><a href="#" onClick={() => setIsOpen(false)}>{t(`about`)}</a></li>
-                    <li><a href="#" onClick={() => setIsOpen(false)}>{t(`products`)}</a></li>
-                    <li><a href="#" onClick={() => setIsOpen(false)}>{t(`order`)}</a></li>
-                    <li><a href="#" onClick={() => setIsOpen(false)}>{t(`contact`)}</a></li>
+                    <li><a href="#HeroSection" onClick={() => setIsOpen(false)}>{t(`about`)}</a></li>
+                    <li><a href="#Products" onClick={() => setIsOpen(false)}>{t(`products`)}</a></li>
+                    <li><a href="#Reservation" onClick={() => setIsOpen(false)}>{t(`order`)}</a></li>
+                    <li><a href="#Contacts" onClick={() => setIsOpen(false)}>{t(`contact`)}</a></li>
                 </ul>
 
                 <div className="social_links mobile-only">

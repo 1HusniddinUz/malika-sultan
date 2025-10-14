@@ -8,7 +8,7 @@ const translationsUz = {
     aboutUs: `MALIKA SULTAN liboslari — bu an’ana va zamonaviylikning betakror ittifoqi. Ularni kiygan har bir ayol, o‘zini shunchaki chiroyli emas, malikadek qudratli his qiladi. Chunki har bir libos — bu qo‘l mehnati, yurak harorati va milliy g‘ururdan to‘qilgan san’at asari.`,
     collectionBtn: "Liboslar kolleksiyasi",
     location: `Manzil `,
-    locationData: `Buxoro viloyati Buxoro shahri Abu Ali Ibn Sino 39`,
+    locationData: `O'zbekistion Res ,Buxoro viloyati 200100, 10/1 B. Naqshband ko'chasi`,
     openHour: "Ish vaqtlari",
     openDate: "Dushanbadan Jumagacha 9:00 dan 21:00 gacha",
     famClothes: `Mashhur liboslar`,

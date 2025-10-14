@@ -25,7 +25,7 @@ const Contacts = () => {
                 <div className="map-container" data-aos="fade-up" data-aos-delay="400">
                     <iframe
                         title="map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191.55146678680578!2d64.43875920688576!3d39.81095143753254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f500f3192a49b83%3A0xe871868d890d6134!2z4oCcU2l0b3JhaSBNb2hpIFhvc2HigJ0gc2FuYXRvcml5c2kgfCDQodCw0L3QsNGC0L7RgNC40LkgwqvQodC40YLQvtGA0LDQuCDQnNC-0YXQuCDQpdC-0YHQsMK7!5e0!3m2!1sru!2s!4v1759816684040!5m2!1sru!2s"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d766.6263884891835!2d64.4347589882039!3d39.77320854256017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5005ebcf65dc4f%3A0xb9c6b9e86bb62434!2sMalika%20Sultan%20Hotel%20jewelry%20boutique!5e0!3m2!1sru!2s!4v1760460606736!5m2!1sru!2s"
                         width="100%"
                         height="450"
                         style={{
@@ -35,7 +35,7 @@ const Contacts = () => {
                         }}
                         allowFullScreen
                         loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
+                        referrerPolicy="no-referrer"
                     ></iframe>
                 </div>
             </div>
