@@ -1,7 +1,7 @@
 const translationsUz = {
     headersec: "Bosh sahifa",
     about: "Biz haqimizda",
-    products: `Liboslar`,
+    products: `Liboslar kolleksiyasi`,
     order: "Buyurtma qilish",
     contact: `Bog'lanish uchun`,
     quotes: `Sharqona go‘zallik — zamonaviy ayol uchun qayta yaratilgan`,

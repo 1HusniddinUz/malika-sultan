@@ -19,7 +19,7 @@ const HeroSection = () => {
         <div id="HeroSection">
             <div className="container">
                 <div className="hero_overlay"></div>
-                <div className="company_about" data-aos="fade-right">
+                <div className="company_about" data-aos="fade-up">
                     <h1 data-aos="fade-down">
                         {t(`quotes`)}
                     </h1>

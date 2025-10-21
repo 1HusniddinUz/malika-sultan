@@ -89,7 +89,7 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    <div className="lang-select">
+                    <div className="lang-select" data-aos="fade-left">
                         <select
                             id="select"
                             onChange={(e) => i18n.changeLanguage(e.target.value)}
