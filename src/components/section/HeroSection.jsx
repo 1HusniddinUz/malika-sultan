@@ -18,6 +18,7 @@ const HeroSection = () => {
     return (
         <div id="HeroSection">
             <div className="container">
+                <div className="hero_overlay"></div>
                 <div className="company_about" data-aos="fade-right">
                     <h1 data-aos="fade-down">
                         {t(`quotes`)}
@@ -25,12 +26,6 @@ const HeroSection = () => {
                     <p data-aos="fade-up">
                         {t(`aboutUs`)}
                     </p>
-                    <a href="#Products">
-                        <button data-aos="zoom-in">{t(`collectionBtn`)}</button>
-                    </a>
-                </div>
-                <div className="company_photo" data-aos="fade-left">
-                    <img src={working_time} alt="working time" data-aos="zoom-in" />
                 </div>
             </div>
 

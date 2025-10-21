@@ -79,8 +79,9 @@ const Navbar = () => {
                                     Marketplace <ChevronDown size={16} />
                                 </button>
                                 <ul className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
-                                    <li><a href="#ozon">Ozon</a></li>
-                                    <li><a href="#yandex">Yandex Market</a></li>
+                                    <li><a href="https://www.wildberries.ru/seller/250045371" target="_blank" rel="noopener noreferrer">Wildberries</a></li>
+                                    <li><a href="#yandex" target="_blank" rel="noopener noreferrer">Ozon</a></li>
+                                    <li><a href="#yandex" target="_blank" rel="noopener noreferrer">Yandex Market</a></li>
                                 </ul>
                             </li>
 

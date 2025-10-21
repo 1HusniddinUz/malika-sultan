@@ -1,25 +1,40 @@
 /* === HERO SECTION === */
 #HeroSection {
     width: 100%;
-    background: #292E36;
-    border: 2px dashed #565353;
-}
+    background-color: #292E36;
 
+}
 #HeroSection .container {
-    width: 90%;
-    padding: 40px 0;
+    object-fit: cover;
+    background-size: cover;
+    background-position: top;
+    background-image: url("./images/working_time.png");
+    position: relative;
+    width: 100%;
     display: flex;
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
     gap: 40px;
 }
-
+.hero_overlay
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0,0.4);
+}
 /* === COMPANY ABOUT TEXT === */
 #HeroSection .company_about {
-    flex: 1;
+    z-index: 2;
+    width: 80%;
+    max-width: 1920px;
+    max-height: 1080px;
+    margin: 0 auto;
+    height: 100vh;
+    padding: 0px 0px 100px 0px;
+    text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: end;
     gap: 30px;
 }
 
@@ -73,6 +88,7 @@
 
 /* === IMAGE BOX === */
 #HeroSection .company_photo {
+    display: none;
     flex: 1;
     background: #3E424A;
     padding: 20px;
