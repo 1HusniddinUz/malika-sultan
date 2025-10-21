@@ -2,10 +2,14 @@ import { useEffect, useState } from "react";
 import "../../assets/Navbar.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import logo from "../../assets/images/logo.png"
-import {useTranslation} from "react-i18next";
+import logo from "../../assets/images/logo.png";
+import { useTranslation } from "react-i18next";
+import { ChevronDown } from "lucide-react"; // icon qo'shdik
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const { t, i18n } = useTranslation();
 
     useEffect(() => {
         AOS.init({
@@ -14,7 +18,7 @@ const Navbar = () => {
             easing: "ease-in-out",
         });
     }, []);
-    const {t, i18n} = useTranslation();
+
     return (
         <nav id="Navbar">
             <div className="container">
@@ -22,7 +26,9 @@ const Navbar = () => {
                 <div className="NavTop">
                     <div className="call_box" data-aos="fade-down">
                         <a href="tel:+998914422266" rel="noopener">
-                            <button>{t(`contact`)}<br/> +998 91 442 22 66</button>
+                            <button>
+                                {t(`contact`)} <br /> +998 91 442 22 66
+                            </button>
                         </a>
                     </div>
 
@@ -57,10 +63,27 @@ const Navbar = () => {
                 <div className="NavBottom">
                     <div className="tool_bar" data-aos="slide-right">
                         <ul>
-                            <li><a href="#">{t(`headersec`)}</a></li>
-                            <li><a href="#HeroSection">{t(`about`)}</a></li>
                             <li><a href="#Products">{t(`products`)}</a></li>
                             <li><a href="#Reservation">{t(`order`)}</a></li>
+
+                            {/* ✅ Marketplace Dropdown */}
+                            <li
+                                className="dropdown"
+                                onMouseEnter={() => setIsDropdownOpen(true)}
+                                onMouseLeave={() => setIsDropdownOpen(false)}
+                            >
+                                <button
+                                    className="dropdown-btn"
+                                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                                >
+                                    Marketplace <ChevronDown size={16} />
+                                </button>
+                                <ul className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
+                                    <li><a href="#ozon">Ozon</a></li>
+                                    <li><a href="#yandex">Yandex Market</a></li>
+                                </ul>
+                            </li>
+
                             <li><a href="#Contacts">{t(`contact`)}</a></li>
                         </ul>
                     </div>
@@ -85,6 +108,23 @@ const Navbar = () => {
                     <li><a href="#" onClick={() => setIsOpen(false)}>{t(`headersec`)}</a></li>
                     <li><a href="#HeroSection" onClick={() => setIsOpen(false)}>{t(`about`)}</a></li>
                     <li><a href="#Products" onClick={() => setIsOpen(false)}>{t(`products`)}</a></li>
+
+                    {/* ✅ Mobile Marketplace dropdown */}
+                    <li className="mobile-dropdown">
+                        <button
+                            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                            className="dropdown-btn"
+                        >
+                            Marketplace <ChevronDown size={16} />
+                        </button>
+                        {isDropdownOpen && (
+                            <ul className="dropdown-menu show">
+                                <li><a href="#ozon" onClick={() => setIsOpen(false)}>Ozon</a></li>
+                                <li><a href="#yandex" onClick={() => setIsOpen(false)}>Yandex Market</a></li>
+                            </ul>
+                        )}
+                    </li>
+
                     <li><a href="#Reservation" onClick={() => setIsOpen(false)}>{t(`order`)}</a></li>
                     <li><a href="#Contacts" onClick={() => setIsOpen(false)}>{t(`contact`)}</a></li>
                 </ul>

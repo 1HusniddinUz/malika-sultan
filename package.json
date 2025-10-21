@@ -13,6 +13,7 @@
     "aos": "^2.3.4",
     "framer-motion": "^12.23.22",
     "gsap": "^3.13.0",
+    "lucide-react": "^0.546.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-i18next": "^16.0.1",
