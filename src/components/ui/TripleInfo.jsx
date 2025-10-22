@@ -24,7 +24,7 @@ const TripleInfo = () => {
         {
             id: 3,
             name: t("order"),
-            location: "makhfuzasalim55@gmail.com",
+            location: "makhfyza@yahoo.com",
             fonts: <i className="fa-solid fa-table"></i>,
         },
     ];

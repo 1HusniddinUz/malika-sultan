@@ -120,8 +120,8 @@ const Navbar = () => {
                         </button>
                         {isDropdownOpen && (
                             <ul className="dropdown-menu show">
-                                <li><a href="#ozon" onClick={() => setIsOpen(false)}>Ozon</a></li>
-                                <li><a href="#yandex" onClick={() => setIsOpen(false)}>Yandex Market</a></li>
+                                <li><a href="#uzum" onClick={() => setIsOpen(false)}>Uzum Market</a></li>
+                                <li><a href="https://market.yandex.uz/card/svadebnyy-platiy/4690551041?businessId=216439526&showOriginalKmEmptyOffer=1&ogV=-6" onClick={() => setIsOpen(false)}>Yandex Market</a></li>
                             </ul>
                         )}
                     </li>
