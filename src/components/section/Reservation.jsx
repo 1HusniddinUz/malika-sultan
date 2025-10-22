@@ -6,7 +6,8 @@ import { useTranslation } from "react-i18next";
 
 const Reservation = () => {
     const { t } = useTranslation();
-    const [form, setForm] = useState({ name: "", email: "" });
+    // email o‘rniga number ishlatyapmiz, shuning uchun state ham shunga mos
+    const [form, setForm] = useState({ name: "", number: "" });
 
     useEffect(() => {
         AOS.init({
@@ -22,20 +23,39 @@ const Reservation = () => {
         setForm((prev) => ({ ...prev, [name]: value }));
     };
 
+    const formatUz = (digits) => {
+        const d = (digits || "").split("").filter(ch => ch >= "0" && ch <= "9").join("").slice(0, 9);
+        const p1 = d.slice(0,2);
+        const p2 = d.slice(2,5);
+        const p3 = d.slice(5,7);
+        const p4 = d.slice(7,9);
+        return `+998 (${p1.padEnd(2, "_")})-${p2.padEnd(3, "_")}-${p3.padEnd(2, "_")}-${p4.padEnd(2, "_")}`;
+    };
+
+    const handleNumberChange = (e) => {
+        let raw = (e.target.value || "");
+        raw = raw.split("").filter(ch => ch >= "0" && ch <= "9").join("");
+        if (raw.startsWith("998")) raw = raw.slice(3);
+        raw = raw.slice(0, 9);
+        setForm((prev) => ({ ...prev, number: raw }));
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const name = form.name.trim();
-        const email = form.email.trim();
-        if (!name || !email) return;
+        const name = (form.name || "").trim();
+        const digits = (form.number || "").trim();
+        if (!name || digits.length !== 9) return;
+
+        const fullNumber = `+998 (${digits.slice(0,2)}) ${digits.slice(2,5)}-${digits.slice(5,7)}-${digits.slice(7,9)}`;
 
         const to = "makhfyza@yahoo.com";
         const subject = "Buyurtma so‘rovi";
-        const body = `Assalomu alaykum,
+        const body = `Assalomu alaykum , liboslaringizdan birini xarid qilish uchun murojaat qilyapman!
 
-Quyidagi ma’lumotlar:
-Ism: ${name}
-Email: ${email}
+Ma’lumotlarim:
+Ismim: ${name}
+Telefon raqamim: ${fullNumber}
 
 Qayta aloqaga chiqsangiz juda xursand bo'lardim )`;
 
@@ -45,7 +65,6 @@ Qayta aloqaga chiqsangiz juda xursand bo'lardim )`;
             `&su=${encodeURIComponent(subject)}` +
             `&body=${encodeURIComponent(body)}`;
 
-        // Faqat yangi tabda ochiladi, joriy oynani ko‘chirmaydi.
         const a = document.createElement("a");
         a.href = gmailUrl;
         a.target = "_blank";
@@ -86,11 +105,12 @@ Qayta aloqaga chiqsangiz juda xursand bo'lardim )`;
                             data-aos-delay="800"
                         />
                         <input
-                            name="email"
-                            type="email"
-                            placeholder="Email"
-                            value={form.email}
-                            onChange={handleChange}
+                            name="number"
+                            type="tel"
+                            inputMode="numeric"
+                            placeholder="+998 (__)-___-__-__"
+                            value={formatUz(form.number)}
+                            onChange={handleNumberChange}
                             required
                             data-aos="fade-left"
                             data-aos-delay="1000"
