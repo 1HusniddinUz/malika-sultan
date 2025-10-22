@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "../../assets/Navbar.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo_w.png";
 import { useTranslation } from "react-i18next";
 import { ChevronDown } from "lucide-react"; // icon qo'shdik
 

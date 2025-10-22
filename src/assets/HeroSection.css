@@ -1,116 +1,106 @@
-/* === HERO SECTION === */
+
 #HeroSection {
     width: 100%;
-    background-color: #292E36;
-
+    background-color: #292e36;
 }
+
 #HeroSection .container {
-    object-fit: cover;
-    background-size: cover;
-    background-position: top;
-    background-image: url("./images/working_time.png");
     position: relative;
     width: 100%;
+    min-height: 100svh; /* safe viewport height on mobile */
     display: flex;
     gap: 40px;
+    background-image: url("./images/working_time.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-inline: clamp(12px, 3vw, 40px);
 }
-.hero_overlay
-{
+
+.hero_overlay {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     z-index: 1;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
 }
+
 /* === COMPANY ABOUT TEXT === */
 #HeroSection .company_about {
     z-index: 2;
     width: 80%;
-    max-width: 1920px;
-    max-height: 1080px;
     margin: 0 auto;
-    height: 100vh;
-    padding: 0px 0px 100px 0px;
+    min-height: 72svh; /* lets text breathe without forcing cropping */
+    padding: clamp(40px, 12vh, 140px) 0 clamp(40px, 10vh, 120px);
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    gap: 30px;
+    justify-content: flex-end;
+    gap: clamp(18px, 3vh, 30px);
 }
 
 #HeroSection .company_about h1 {
-    font-size: 3rem;
     font-family: "Cormorant Infant", serif;
     font-weight: 400;
-    color: white;
-    line-height: 1.2;
+    color: #fff;
+    line-height: 1.15;
+    font-size: clamp(1.8rem, 4.2vw, 3rem);
     transition: text-shadow 0.3s ease;
+    text-wrap: balance;
 }
 
 #HeroSection .company_about h1:hover {
-    text-shadow: 0px 4px 15px rgba(225, 177, 104, 0.5);
+    text-shadow: 0 4px 15px rgba(225, 177, 104, 0.5);
 }
 
-#HeroSection .company_about p {
-    font-size: 1.1rem;
+#HeroSection .company_about .about_text {
+    color: #fff;
     line-height: 1.6;
-    letter-spacing: 0.5px;
-    color: white;
+    letter-spacing: 0.3px;
+    font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+    margin-inline: auto;
     transition: color 0.3s ease, text-shadow 0.3s ease;
+    overflow-wrap: anywhere; /* prevent overflow on long words */
+    text-wrap: pretty;
 }
 
-#HeroSection .company_about p:hover {
-    color: #E1B168;
-    text-shadow: 0px 2px 10px rgba(225, 177, 104, 0.4);
+#HeroSection .company_about .about_text:hover {
+    color: #e1b168;
+    text-shadow: 0 2px 10px rgba(225, 177, 104, 0.4);
 }
 
-/* === BUTTON === */
+/* Optional: clamp copy on small screens. Add `.clamp-mobile` to <p> if you want truncation. */
+.clamp-mobile {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8; /* show ~8 lines on phones */
+    overflow: hidden;
+}
+
+/* === BUTTON (if used later) === */
 #HeroSection .company_about a button {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 2px;
-    color: #E1B168;
+    color: #e1b168;
     background: transparent;
-    padding: 16px 40px;
-    border: 1px solid #E1B168;
-    border-radius: 6px;
+    padding: 14px 32px;
+    border: 1px solid #e1b168;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 #HeroSection .company_about a button:hover {
-    background: #E1B168;
-    color: #292E36;
-    box-shadow: 0px 8px 20px rgba(225, 177, 104, 0.3);
-    transform: translateY(-3px);
+    background: #e1b168;
+    color: #292e36;
+    box-shadow: 0 8px 20px rgba(225, 177, 104, 0.3);
+    transform: translateY(-2px);
 }
 
-/* === IMAGE BOX === */
+/* === IMAGE BOX (unused) === */
 #HeroSection .company_photo {
     display: none;
-    flex: 1;
-    background: #3E424A;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    transition: box-shadow 0.4s ease, transform 0.4s ease;
-}
-
-#HeroSection .company_photo:hover {
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
-    transform: scale(1.02);
-}
-
-#HeroSection .company_photo img {
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-    transition: transform 0.4s ease;
-}
-
-#HeroSection .company_photo img:hover {
-    transform: scale(1.05);
 }
 
 /* === AOS ANIMATION FIX === */
@@ -118,56 +108,22 @@
     transition-property: transform, opacity !important;
 }
 
-/* === RESPONSIVE BREAKPOINTS === */
-
-/* 📱 Mobile (max 768px) */
-@media (max-width: 768px) {
-    #HeroSection .container {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 10px;
-    }
-
-    #HeroSection .company_about {
-        width: 100%;
-        align-items: center;
-    }
-
-    #HeroSection .company_about h1 {
-        font-size: 2.5rem;
-    }
-
-    #HeroSection .company_about p {
-        font-size: 1rem;
-        max-width: 90%;
-    }
-
-    #HeroSection .company_photo {
-        width: 100%;
-        margin-top: 30px;
-    }
-
-    #HeroSection .company_photo img {
-        max-width: 300px;
-    }
-}
 /* === VIDEO SECTION === */
 #HeroSection .video_section {
     width: 100%;
-    margin-top: 60px;
+    margin-top: 0; /* avoid extra jump under tall hero */
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg, #292E36 0%, #1E2025 100%);
-    padding: 60px 20px;
-    border-top: 1px solid #3E424A;
-    border-bottom: 1px solid #3E424A;
+    background: linear-gradient(180deg, #292e36 0%, #1e2025 100%);
+    padding: clamp(40px, 6vw, 60px) 20px;
+    border-top: 1px solid #3e424a;
+    border-bottom: 1px solid #3e424a;
 }
 
 #HeroSection .video_section .video_container {
     position: relative;
-    width: 90%;
-    max-width: 1000px;
+    width: min(95%, 1000px);
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 16px;
@@ -189,35 +145,52 @@
 
 /* 📱 Mobile (max 768px) */
 @media (max-width: 768px) {
-    #HeroSection .video_section {
-        padding: 40px 10px;
+    #HeroSection .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+        min-height: auto; /* allow height to grow with long copy */
+        padding-block: 48px 28px;
     }
 
-    #HeroSection .video_section .video_container {
+    #HeroSection .company_about {
         width: 100%;
-        max-width: 95%;
-        aspect-ratio: 16 / 9;
+        min-height: unset;
+        padding: 56px 12px 40px;
+        justify-content: flex-end;
     }
+
+    #HeroSection .company_about h1 {
+        font-size: clamp(1.6rem, 6.2vw, 2.2rem);
+    }
+
+    #HeroSection .company_about .about_text {
+        font-size: clamp(0.95rem, 4vw, 1.05rem);
+        max-width: 62ch;
+    }
+
+    /* If you must force it to fit one screen, uncomment the clamp-mobile class on the <p> */
 }
 
 /* 📟 Tablet (769px – 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
+    #HeroSection .container {
+        min-height: 80svh;
+        gap: 28px;
+        padding-block: 64px 36px;
+    }
+
     #HeroSection .company_about h1 {
-        font-size: 3.2rem;
+        font-size: clamp(2rem, 3.2vw, 3rem);
     }
 
-    #HeroSection .company_about p {
-        font-size: 1.05rem;
-    }
-
-    #HeroSection .company_photo img {
-        max-width: 380px;
+    #HeroSection .company_about .about_text {
+        font-size: clamp(1rem, 1.8vw, 1.08rem);
+        max-width: 66ch;
     }
 }
 
 /* 🖥️ Desktop (1025px+) */
 @media (min-width: 1025px) {
-    #HeroSection .company_about h1 {
-        font-size: 3rem;
-    }
+    #HeroSection .company_about h1 { font-size: clamp(2.4rem, 3vw, 3rem); }
 }
