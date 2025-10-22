@@ -80,8 +80,8 @@ const Navbar = () => {
                                 </button>
                                 <ul className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
                                     <li><a href="https://www.wildberries.ru/seller/250045371" target="_blank" rel="noopener noreferrer">Wildberries</a></li>
-                                    <li><a href="#yandex" target="_blank" rel="noopener noreferrer">Ozon</a></li>
-                                    <li><a href="#yandex" target="_blank" rel="noopener noreferrer">Yandex Market</a></li>
+                                    <li><a href="https://uzum.uz/uz/product/toy-liboslari-bayram-2047122" onClick={() => setIsOpen(false)}>Uzum Market</a></li>
+                                    <li><a href="https://market.yandex.uz/card/svadebnyy-platiy/4690551041?businessId=216439526&showOriginalKmEmptyOffer=1&ogV=-6" onClick={() => setIsOpen(false)}>Yandex Market</a></li>
                                 </ul>
                             </li>
 
@@ -120,7 +120,8 @@ const Navbar = () => {
                         </button>
                         {isDropdownOpen && (
                             <ul className="dropdown-menu show">
-                                <li><a href="#uzum" onClick={() => setIsOpen(false)}>Uzum Market</a></li>
+                                <li><a href="https://www.wildberries.ru/seller/250045371" target="_blank" rel="noopener noreferrer">Wildberries</a></li>
+                                <li><a href="https://uzum.uz/uz/product/toy-liboslari-bayram-2047122" onClick={() => setIsOpen(false)}>Uzum Market</a></li>
                                 <li><a href="https://market.yandex.uz/card/svadebnyy-platiy/4690551041?businessId=216439526&showOriginalKmEmptyOffer=1&ogV=-6" onClick={() => setIsOpen(false)}>Yandex Market</a></li>
                             </ul>
                         )}
