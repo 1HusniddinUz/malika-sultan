@@ -15,15 +15,9 @@ const HeroSection = () => {
 
     return (
         <div id="HeroSection">
-            <div className="container">
-                <div className="hero_overlay" />
-                <div className="company_about" data-aos="fade-up">
-                    <h1 data-aos="fade-down">{t("quotes")}</h1>
-                    <p className="about_text" data-aos="fade-up">{t("aboutUs")}</p>
-                </div>
-            </div>
 
             {/* 🎥 YouTube video bo‘limi */}
+
             <div className="video_section" data-aos="fade-up">
                 <div className="video_container">
                     <iframe
@@ -34,6 +28,17 @@ const HeroSection = () => {
                     />
                 </div>
             </div>
+
+
+            <div className="container" id="AboutUs">
+                <div className="hero_overlay" />
+                <div className="company_about" data-aos="fade-up">
+                    <h1 data-aos="fade-down">{t("quotes")}</h1>
+                    <p className="about_text" data-aos="fade-up">{t("aboutUs")}</p>
+                </div>
+            </div>
+
+
         </div>
     );
 };

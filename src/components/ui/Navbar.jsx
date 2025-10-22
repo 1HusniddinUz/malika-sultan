@@ -63,6 +63,7 @@ const Navbar = () => {
                 <div className="NavBottom">
                     <div className="tool_bar" data-aos="slide-right">
                         <ul>
+                            <li><a href="#AboutUs" onClick={() => setIsOpen(false)}>{t(`about`)}</a></li>
                             <li><a href="#Products">{t(`products`)}</a></li>
                             <li><a href="#Reservation">{t(`order`)}</a></li>
 
