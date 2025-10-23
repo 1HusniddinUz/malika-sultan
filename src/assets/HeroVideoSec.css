@@ -46,7 +46,7 @@
 #HeroVideoSec .hero__logo {
     position: relative;
     z-index: 2;
-    width: clamp(140px, 22vw, 320px);
+    width: 500px;
     height: auto;
     filter: drop-shadow(0 12px 40px rgba(0,0,0,0.35));
     transform: translateZ(0); /* GPU hint */
@@ -54,7 +54,13 @@
 
 /* Kichik ekranlarda logo biroz kichikroq */
 @media (max-width: 480px) {
-    #HeroVideoSec .hero__logo { width: clamp(120px, 40vw, 220px); }
+    #HeroVideoSec
+    {
+        height: 80vh;
+    }
+    #HeroVideoSec .hero__logo {
+        width: 300px;
+    }
 }
 
 /* Harakatga sezgir foydalanuvchilarni hurmat qilamiz */

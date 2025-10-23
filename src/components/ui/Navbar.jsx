@@ -94,11 +94,11 @@ const Navbar = () => {
                         <select
                             id="select"
                             onChange={(e) => i18n.changeLanguage(e.target.value)}
-                            defaultValue="en"
+                            defaultValue="uz"
                         >
+                            <option value="uz">🇺🇿 O'zbek</option>
                             <option value="en">🇬🇧 English</option>
                             <option value="ru">🇷🇺 Русский</option>
-                            <option value="uz">🇺🇿 O'zbek</option>
                         </select>
                     </div>
                 </div>
@@ -131,13 +131,6 @@ const Navbar = () => {
                     <li><a href="#Reservation" onClick={() => setIsOpen(false)}>{t(`order`)}</a></li>
                     <li><a href="#Contacts" onClick={() => setIsOpen(false)}>{t(`contact`)}</a></li>
                 </ul>
-
-                <div className="social_links mobile-only">
-                    <a href="#"><i className="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i className="fa-brands fa-telegram"></i></a>
-                    <a href="#"><i className="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i className="fa-brands fa-youtube"></i></a>
-                </div>
                 <div className="mobile-buttons">
                     <a href="tel:+998914422266" rel="noopener">
                         <button>{t(`contact`)}<br/> +998 91 442 22 66</button>
@@ -151,11 +144,11 @@ const Navbar = () => {
                     <select
                         id="select"
                         onChange={(e) => i18n.changeLanguage(e.target.value)}
-                        defaultValue="en"
+                        defaultValue="uz"
                     >
+                        <option value="uz">🇺🇿 O'zbek</option>
                         <option value="en">🇬🇧 English</option>
                         <option value="ru">🇷🇺 Русский</option>
-                        <option value="uz">🇺🇿 O'zbek</option>
                     </select>
                 </div>
             </div>

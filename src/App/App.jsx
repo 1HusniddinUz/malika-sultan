@@ -18,8 +18,8 @@ i18n.use(initReactI18next).init({
         uz: { translation: translationsUz },
         ru: { translation: translationsRU }
     },
-    lng: "en",
-    fallbackLng: "en",
+    lng: "uz",
+    fallbackLng: "uz",
 })
 function App() {
     const changeLang = (value) => {

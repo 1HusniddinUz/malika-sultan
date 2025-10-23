@@ -15,6 +15,13 @@ const HeroSection = () => {
 
     return (
         <div id="HeroSection">
+            <div className="container" id="AboutUs">
+                <div className="hero_overlay" />
+                <div className="company_about" data-aos="fade-up">
+                    <h1 data-aos="fade-down">{t("quotes")}</h1>
+                    <p className="about_text" data-aos="fade-up">{t("aboutUs")}</p>
+                </div>
+            </div>
 
             {/* 🎥 YouTube video bo‘limi */}
 
@@ -28,16 +35,6 @@ const HeroSection = () => {
                     />
                 </div>
             </div>
-
-
-            <div className="container" id="AboutUs">
-                <div className="hero_overlay" />
-                <div className="company_about" data-aos="fade-up">
-                    <h1 data-aos="fade-down">{t("quotes")}</h1>
-                    <p className="about_text" data-aos="fade-up">{t("aboutUs")}</p>
-                </div>
-            </div>
-
 
         </div>
     );
